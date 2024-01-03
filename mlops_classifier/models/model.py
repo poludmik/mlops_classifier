@@ -31,5 +31,6 @@ class MyAwesomeModel(nn.Module):
         # flatten the output of conv2 to (batch_size, 32 * 7 * 7)
         x = x.view(x.size(0), -1)       
         output = self.out(x)
+        output = nn.Softmax(dim=1)(output)
         # print(output.shape)
         return output

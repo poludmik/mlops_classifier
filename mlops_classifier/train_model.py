@@ -20,7 +20,7 @@ def train(lr):
     print("Training day and night")
     print(lr)
 
-    epochs = 5
+    epochs = 10
     bs = 64  # Set your desired batch size
     
     # TODO: Implement training loop here
