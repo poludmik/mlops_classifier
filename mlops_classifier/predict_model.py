@@ -2,6 +2,8 @@ import numpy as np
 import torch
 import click
 
+from visualizations.visualize import viz_main
+
 @click.group()
 def cli():
     """Command line interface."""
@@ -46,7 +48,12 @@ def predict(model_pt, images):
     print(predictions)
 
 
+@click.command()
+def vizualize():
+    viz_main()
+
 cli.add_command(predict)
+cli.add_command(vizualize)
 
 if __name__ == '__main__':
     cli()

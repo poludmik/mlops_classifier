@@ -25,7 +25,7 @@ class MyAwesomeModel(nn.Module):
         self.out = nn.Linear(32 * 7 * 7, 10)
 
     def forward(self, x):
-        x = x.unsqueeze(1) 
+        x = x.unsqueeze(1)
         x = self.conv1(x)
         x = self.conv2(x)
         # flatten the output of conv2 to (batch_size, 32 * 7 * 7)
