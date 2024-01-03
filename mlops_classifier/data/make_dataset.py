@@ -8,15 +8,16 @@ def mnist():
     # test = torch.randn(10000, 784)
 
     # Load data from the data/corruptmnist/ folder for every 'train_images_0.pt' to 'train_images_5.pt' and store to train variable
-    data = [torch.load(f"data/raw/corruptmnist/train_images_{i}.pt") for i in range(6)]
+    # data = [torch.load(f"data/raw/corruptmnist/train_images_{i}.pt") for i in range(6)]
+    data = [torch.load(f"data/raw/corruptmnist_v2/train_images_{i}.pt") for i in range(10)]
     # for i in data:
     #     print(i.shape)
     train = torch.cat(data)
-    train_labels = torch.cat([torch.load(f"data/raw/corruptmnist/train_target_{i}.pt") for i in range(6)])
+    train_labels = torch.cat([torch.load(f"data/raw/corruptmnist_v2/train_target_{i}.pt") for i in range(10)])
 
-    test = torch.load("data/raw/corruptmnist/test_images.pt")
+    test = torch.load("data/raw/corruptmnist_v2/test_images.pt")
     # print(test.shape)
-    test_labels = torch.load("data/raw/corruptmnist/test_target.pt")
+    test_labels = torch.load("data/raw/corruptmnist_v2/test_target.pt")
     # create a histogram of the labels and show it
     # import matplotlib.pyplot as plt
     # plt.hist(test_labels)
@@ -54,7 +55,7 @@ if __name__ == "__main__":
     tr, tst = mnist()
 
     # Save the train and test data to data/processed/ folder in a .pt format
-    torch.save(tr, "data/processed/corruptmnist/train.pt")
-    torch.save(tst, "data/processed/corruptmnist/test.pt")
+    torch.save(tr, "data/processed/corruptmnist_v2/train.pt")
+    torch.save(tst, "data/processed/corruptmnist_v2/test.pt")
 
     vizualize_random_image(tr)
