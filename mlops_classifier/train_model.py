@@ -22,10 +22,10 @@ def train(lr):
 
     epochs = 10
     bs = 64  # Set your desired batch size
-    
+
     # TODO: Implement training loop here
     model = MyAwesomeModel()
-    train_set = torch.load('data/processed/corruptmnist/train.pt')
+    train_set = torch.load("data/processed/corruptmnist/train.pt")
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=bs, shuffle=True)
 
     optimizer = optim.Adam(model.parameters(), lr=lr)
@@ -53,7 +53,7 @@ def train(lr):
 
             optimizer.step()
 
-        train_losses.append(train_loss/len(train_loader))  # Compute average train loss
+        train_losses.append(train_loss / len(train_loader))  # Compute average train loss
         print(f"Epoch {epoch+1}/{epochs}.. Train loss: {train_loss/len(train_loader):.3f}")
 
     correct = 0
@@ -67,18 +67,18 @@ def train(lr):
 
     # Plotting the train loss
     plt.figure(figsize=(10, 5))
-    plt.plot(train_losses, label='Train Loss')
-    plt.xlabel('Epochs')
-    plt.ylabel('Loss')
+    plt.plot(train_losses, label="Train Loss")
+    plt.xlabel("Epochs")
+    plt.ylabel("Loss")
     plt.legend()
-    plt.savefig('reports/figures/MyAwesomeModelLoss.png')
+    plt.savefig("reports/figures/MyAwesomeModelLoss.png")
     plt.show()
 
     accuracy = 100 * correct / total
-    print(f'Accuracy on the training set: {round(accuracy, 4)}%')
+    print(f"Accuracy on the training set: {round(accuracy, 4)}%")
 
     # Save the model
-    torch.save(model, 'models/MyAwesomeModel/model.pt')
+    torch.save(model, "models/MyAwesomeModel/model.pt")
 
 
 @click.command()
@@ -91,7 +91,7 @@ def evaluate(model_checkpoint):
     # TODO: Implement evaluation logic here
     model = torch.load(model_checkpoint)
     # _, test_set = mnist()
-    test_set = torch.load('data/processed/corruptmnist/test.pt')
+    test_set = torch.load("data/processed/corruptmnist/test.pt")
     test_loader = torch.utils.data.DataLoader(test_set, shuffle=False)
 
     correct = 0
@@ -105,7 +105,7 @@ def evaluate(model_checkpoint):
             correct += (predicted == labels).sum().item()
 
     accuracy = 100 * correct / total
-    print(f'Accuracy on the test set: {round(accuracy, 4)}%')
+    print(f"Accuracy on the test set: {round(accuracy, 4)}%")
 
 
 cli.add_command(train)

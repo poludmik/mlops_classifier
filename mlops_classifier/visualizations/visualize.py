@@ -7,13 +7,15 @@ import os
 
 # Module doesn't work
 
+
 def load_images(image_path):
-    if image_path.endswith('.npy'):
+    if image_path.endswith(".npy"):
         images = np.load(image_path)
         images = torch.from_numpy(images).float()
     else:
-        print('Image format not supported (please use .npy)')
+        print("Image format not supported (please use .npy)")
     return images
+
 
 def extract_features(model, dataloader):
     model.eval()
@@ -24,10 +26,11 @@ def extract_features(model, dataloader):
             features.append(out)
     return torch.cat(features, dim=0)
 
+
 def viz_main():
-    model_path = 'models/MyAwesomeModel/model.pt'
-    data_path = 'data/raw/random_mnist_images/mnist_sample.npy'
-    
+    model_path = "models/MyAwesomeModel/model.pt"
+    data_path = "data/raw/random_mnist_images/mnist_sample.npy"
+
     # Load the pre-trained model
     model = torch.load(model_path)
     model = nn.Sequential(*list(model.children())[:-1])  # Remove the last layer
@@ -47,6 +50,6 @@ def viz_main():
 
     # Plot and save the visualization
     plt.scatter(features_2d[:, 0], features_2d[:, 1])
-    os.makedirs('reports/figures', exist_ok=True)
-    plt.savefig('reports/figures/tsne_visualization.png')
+    os.makedirs("reports/figures", exist_ok=True)
+    plt.savefig("reports/figures/tsne_visualization.png")
     plt.show()
