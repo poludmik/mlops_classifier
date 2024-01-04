@@ -7,11 +7,11 @@ name = "mlops_classifier"
 version = "0.0.1"
 description = "A project to learn to apply different MLOps concepts on practice."
 authors = [
-  { name = "Mikhail Poludin", email = "your@email.com" },
+  { name = "Mikhail Poludin", email = "michael.poludin@gmail.com" },
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
-requires-python = "~=3.11"
+requires-python = ">=3.8"
 dynamic = ["dependencies", "optional-dependencies"]
 
 [tool.setuptools]

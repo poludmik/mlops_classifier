@@ -38,6 +38,8 @@ def classify(model: torch.nn.Module, dataloader: torch.utils.data.DataLoader) ->
 @click.argument("model_pt")
 @click.argument("images")
 def predict(model_pt, images):
+
+    print("Testing cuda in a docker container: ", torch.cuda.is_available())
     model = torch.load(model_pt)
     images = load_images(images)
     dataloader = torch.utils.data.DataLoader(images, batch_size=64)

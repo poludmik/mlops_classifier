@@ -1,1 +1,4 @@
-torch >= 2.1.0
+click
+matplotlib
+scikit_learn
+torch==2.1.2
