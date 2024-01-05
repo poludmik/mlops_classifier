@@ -10,6 +10,11 @@ from data.make_dataset import mnist
 
 import hydra
 
+import pdb
+
+import wandb
+
+
 
 @hydra.main(config_path="", config_name="config_train.yaml", version_base="1.1")
 def main(cfg):
@@ -25,10 +30,37 @@ def main(cfg):
     random.seed(cfg.hyperparameters.seed)
     torch.manual_seed(cfg.hyperparameters.seed)
 
+    wandb.init(entity="poludmik", 
+                project="mlops_course", 
+                name="logging_images",
+                config={
+                    "epochs": epochs, 
+                    "batch_size": bs, 
+                    "lr": lr
+                    }
+                    )
+
+    # Example sweep configuration
+    sweep_configuration = {
+        "method": "random",
+        "name": "sweep",
+        "metric": {"goal": "minimize", "name": "train_loss"},
+        "parameters": {
+            "batch_size": {"values": [16, 32, 64]},
+            "epochs": {"values": [5, 10, 15]},
+            "lr": {"max": 0.1, "min": 0.0001},
+        },
+    }
+
+    sweep_id = wandb.sweep(sweep=sweep_configuration, project="project-name")
+
     # TODO: Implement training loop here
 
     model = MyAwesomeModel()
     train_set = torch.load("../../../data/processed/corruptmnist/train.pt")
+
+    images_t = train_set
+
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=bs, shuffle=True)
 
     optimizer = optim.Adam(model.parameters(), lr=lr)
@@ -56,8 +88,14 @@ def main(cfg):
 
             optimizer.step()
 
+        wandb.log({"train_loss": train_loss / len(train_loader)})
+
+        # pdb.set_trace()
+
         train_losses.append(train_loss / len(train_loader))  # Compute average train loss
         print(f"Epoch {epoch+1}/{epochs}.. Train loss: {train_loss/len(train_loader):.3f}")
+
+    wandb.log({"train_set": [wandb.Image(im) for im, _ in images_t]})
 
     correct = 0
     total = 0

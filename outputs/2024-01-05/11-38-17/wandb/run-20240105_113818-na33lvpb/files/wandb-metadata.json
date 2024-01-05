@@ -1,0 +1,108 @@
+{
+    "os": "Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-01-05T10:38:18.734398",
+    "startedAt": "2024-01-05T10:38:18.245093",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/micha/homeworks/MLOps/mlops_classifier/mlops_classifier/train_reproducibly.py",
+    "codePathLocal": null,
+    "codePath": "mlops_classifier/train_reproducibly.py",
+    "git": {
+        "remote": "https://github.com/poludmik/mlops_classifier.git",
+        "commit": "59b45c7d9b862548ebdedd4c8b00b3dba3c9f739"
+    },
+    "email": "michael.poludin@gmail.com",
+    "root": "/home/micha/homeworks/MLOps/mlops_classifier",
+    "host": "misha-pc",
+    "username": "micha",
+    "executable": "/home/micha/anaconda3/envs/mlops_classifier/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2591.997,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2591.997,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 250.92389297485352,
+            "used": 145.9199562072754
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 7.643695831298828
+    }
+}
