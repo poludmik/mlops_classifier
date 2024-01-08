@@ -10,6 +10,8 @@ class TestClass:
         assert 2 == 2
         assert MyAwesomeModel() is not None
 
+    import os.path
+    @pytest.mark.skipif(not os.path.exists("data/processed/corruptmnist/test.pt"), reason="Data files not found")
     def test_mytest2(self):
         model = MyAwesomeModel()
         test_set = torch.load("data/processed/corruptmnist/test.pt")
