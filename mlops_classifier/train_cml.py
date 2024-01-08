@@ -2,13 +2,13 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 import torch
 
-from mlops_classifier.models.model import MyAwesomeModel
+# from mlops_classifier.models.model import MyAwesomeModel
 
 # assume we have a trained model
 # model = MyAwesomeModel()
 model = torch.load("models/MyAwesomeModel/model.pt")
 
-test_set = torch.load("data/processed/corruptmnist/test.pt")
+test_set = torch.load("test_data/test.pt")
 test_dataloader = torch.utils.data.DataLoader(test_set, shuffle=False)
 
 preds, target = [], []
