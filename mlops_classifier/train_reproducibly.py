@@ -30,12 +30,12 @@ def main(cfg):
     random.seed(cfg.hyperparameters.seed)
     torch.manual_seed(cfg.hyperparameters.seed)
 
-    wandb.init(entity="poludmik", 
-                project="mlops_course", 
+    wandb.init(entity="poludmik",
+                project="mlops_course",
                 name="logging_images",
                 config={
-                    "epochs": epochs, 
-                    "batch_size": bs, 
+                    "epochs": epochs,
+                    "batch_size": bs,
                     "lr": lr
                     }
                     )
