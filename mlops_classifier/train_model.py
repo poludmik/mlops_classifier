@@ -93,7 +93,8 @@ def evaluate(model_checkpoint):
     # _, test_set = mnist()
     test_set = torch.load("data/processed/corruptmnist/test.pt")
     test_loader = torch.utils.data.DataLoader(test_set, shuffle=False)
-
+    # device = torch.device('cuda:0')
+    # model = model.to(device)
     correct = 0
     total = 0
     with torch.no_grad():
