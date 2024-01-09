@@ -20,6 +20,6 @@ jobs:
           # cml-publish confusion_matrix.png --md >> report.md
           # cml publish confusion_matrix.png --md >> report.md
           # cml-send-comment report.md
-          # cml comment ![inline](./confusion_matrix.png)
+          cml comment ![inline](./confusion_matrix.png)
           # echo '![](./confusion_matrix.png "Confusion Matrix")' >> report.md
           cml comment create report.md

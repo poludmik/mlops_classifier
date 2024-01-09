@@ -1,6 +1,305 @@
 outs:
-- md5: 42f32696b0213d7ea3bb1b05ae6c97cd.dir
-  size: 573160992
-  nfiles: 43
-  hash: md5
+- hash: md5
   path: data
+  files:
+  - relpath: processed/.gitkeep
+    md5: d41d8cd98f00b204e9800998ecf8427e
+    size: 0
+    cloud:
+      remote_storage:
+        etag: 08bae98ab19ed083031001
+        version_id: '1704800934868154'
+  - relpath: processed/corruptmnist/test.pt
+    md5: 325e606572b13c32a13bda8e8eef1c4d
+    size: 15761350
+    cloud:
+      remote_storage:
+        etag: 08f5ce83b39ed083031001
+        version_id: '1704800938944373'
+  - relpath: processed/corruptmnist/train.pt
+    md5: 2a89bdd66ad055d45cff9829543f5556
+    size: 94321356
+    cloud:
+      remote_storage:
+        etag: 08d09dfcb39ed083031001
+        version_id: '1704800940920528'
+  - relpath: processed/corruptmnist_v2/test.pt
+    md5: 325e606572b13c32a13bda8e8eef1c4d
+    size: 15761350
+    cloud:
+      remote_storage:
+        etag: 08bc84ccb29ed083031001
+        version_id: '1704800938033724'
+  - relpath: processed/corruptmnist_v2/train.pt
+    md5: 23f155648d884f776c909dae1793ab0c
+    size: 157201356
+    cloud:
+      remote_storage:
+        etag: 08b3bdeeb39ed083031001
+        version_id: '1704800940695219'
+  - relpath: raw/.gitkeep
+    md5: d41d8cd98f00b204e9800998ecf8427e
+    size: 0
+    cloud:
+      remote_storage:
+        etag: 08d9f080b19ed083031001
+        version_id: '1704800934705241'
+  - relpath: raw/corruptmnist/test_images.pt
+    md5: dbaef582b7c62889340e79e408b1eb81
+    size: 15680759
+    cloud:
+      remote_storage:
+        etag: 08cabbbfb29ed083031001
+        version_id: '1704800937827786'
+  - relpath: raw/corruptmnist/test_target.pt
+    md5: 07a46d22581416c598f8b052816e3f56
+    size: 80759
+    cloud:
+      remote_storage:
+        etag: 08fdf794b19ed083031001
+        version_id: '1704800935033853'
+  - relpath: raw/corruptmnist/train_images_0.pt
+    md5: 45a5787aa4d44cc51bbc31f963513b05
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08d7cb9fb29ed083031001
+        version_id: '1704800937305559'
+  - relpath: raw/corruptmnist/train_images_1.pt
+    md5: a5c62febd0bb8c80df768b7c208a9d27
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 0885e4f5b29ed083031001
+        version_id: '1704800938717701'
+  - relpath: raw/corruptmnist/train_images_2.pt
+    md5: f20c7ad31a03213f3fa2ae2f03e3085b
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08d6efd2b29ed083031001
+        version_id: '1704800938145750'
+  - relpath: raw/corruptmnist/train_images_3.pt
+    md5: c57ae96d4e686648971e65d738f0332a
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 0896d0ffb29ed083031001
+        version_id: '1704800938878998'
+  - relpath: raw/corruptmnist/train_images_4.pt
+    md5: 6d70cc8f6423c00671c2aa64fb139d67
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08ec91bab29ed083031001
+        version_id: '1704800937740524'
+  - relpath: raw/corruptmnist/train_images_5.pt
+    md5: 826e31e8e2fd6296dd1ad1d4cbbf0c55
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08e2efe9b29ed083031001
+        version_id: '1704800938522594'
+  - relpath: raw/corruptmnist/train_target_0.pt
+    md5: e4a6683c59059f14cef44dfec30cdc21
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 088cc8adb19ed083031001
+        version_id: '1704800935437324'
+  - relpath: raw/corruptmnist/train_target_1.pt
+    md5: 89b2d0ceabecbb618b05e536eade36fe
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08b6c7adb19ed083031001
+        version_id: '1704800935437238'
+  - relpath: raw/corruptmnist/train_target_2.pt
+    md5: b6eba9a036e61275df9d46f11acd0541
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08e9c7adb19ed083031001
+        version_id: '1704800935437289'
+  - relpath: raw/corruptmnist/train_target_3.pt
+    md5: a27f99f24f43d6c653e1244b21d80de0
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08b0c8adb19ed083031001
+        version_id: '1704800935437360'
+  - relpath: raw/corruptmnist/train_target_4.pt
+    md5: b1b55f6a9baa7356bf87430775e37aa6
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08f7c9adb19ed083031001
+        version_id: '1704800935437559'
+  - relpath: raw/corruptmnist/train_target_5.pt
+    md5: b44e2cd89f6efcbe4eb88253da30f327
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 0886cbadb19ed083031001
+        version_id: '1704800935437702'
+  - relpath: raw/corruptmnist_v2/test_images.pt
+    md5: dbaef582b7c62889340e79e408b1eb81
+    size: 15680759
+    cloud:
+      remote_storage:
+        etag: 088dafcfb29ed083031001
+        version_id: '1704800938088333'
+  - relpath: raw/corruptmnist_v2/test_target.pt
+    md5: 07a46d22581416c598f8b052816e3f56
+    size: 80759
+    cloud:
+      remote_storage:
+        etag: 08cffd91b19ed083031001
+        version_id: '1704800934985423'
+  - relpath: raw/corruptmnist_v2/train_images_0.pt
+    md5: 45a5787aa4d44cc51bbc31f963513b05
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08cda5e1b29ed083031001
+        version_id: '1704800938382029'
+  - relpath: raw/corruptmnist_v2/train_images_1.pt
+    md5: a5c62febd0bb8c80df768b7c208a9d27
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08b5ca8cb29ed083031001
+        version_id: '1704800936994101'
+  - relpath: raw/corruptmnist_v2/train_images_2.pt
+    md5: f20c7ad31a03213f3fa2ae2f03e3085b
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08a2cef8b29ed083031001
+        version_id: '1704800938764066'
+  - relpath: raw/corruptmnist_v2/train_images_3.pt
+    md5: c57ae96d4e686648971e65d738f0332a
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08ee858cb39ed083031001
+        version_id: '1704800939082478'
+  - relpath: raw/corruptmnist_v2/train_images_4.pt
+    md5: 6d70cc8f6423c00671c2aa64fb139d67
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 088684b2b29ed083031001
+        version_id: '1704800937607686'
+  - relpath: raw/corruptmnist_v2/train_images_5.pt
+    md5: 826e31e8e2fd6296dd1ad1d4cbbf0c55
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08baefb4b29ed083031001
+        version_id: '1704800937654202'
+  - relpath: raw/corruptmnist_v2/train_images_6.pt
+    md5: b3fa8ee87cefc20a5074044ff361adb3
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08febbccb29ed083031001
+        version_id: '1704800938040830'
+  - relpath: raw/corruptmnist_v2/train_images_7.pt
+    md5: 84b740a52c109f7bcd6c5b2a6f6f6704
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 088bffcdb29ed083031001
+        version_id: '1704800938065803'
+  - relpath: raw/corruptmnist_v2/train_images_8.pt
+    md5: 073bf6e1bd43645a797e5748f6340a87
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 08a78dafb29ed083031001
+        version_id: '1704800937559719'
+  - relpath: raw/corruptmnist_v2/train_images_9.pt
+    md5: e5080a4190d577ceaf0b7516241e0c4f
+    size: 15680768
+    cloud:
+      remote_storage:
+        etag: 0894da88b39ed083031001
+        version_id: '1704800939027732'
+  - relpath: raw/corruptmnist_v2/train_target_0.pt
+    md5: e4a6683c59059f14cef44dfec30cdc21
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08c5df9ab19ed083031001
+        version_id: '1704800935129029'
+  - relpath: raw/corruptmnist_v2/train_target_1.pt
+    md5: 89b2d0ceabecbb618b05e536eade36fe
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08abcda8b19ed083031001
+        version_id: '1704800935356075'
+  - relpath: raw/corruptmnist_v2/train_target_2.pt
+    md5: b6eba9a036e61275df9d46f11acd0541
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08ebc6adb19ed083031001
+        version_id: '1704800935437163'
+  - relpath: raw/corruptmnist_v2/train_target_3.pt
+    md5: a27f99f24f43d6c653e1244b21d80de0
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08a8b8aab19ed083031001
+        version_id: '1704800935386152'
+  - relpath: raw/corruptmnist_v2/train_target_4.pt
+    md5: b1b55f6a9baa7356bf87430775e37aa6
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08a9d0b2b19ed083031001
+        version_id: '1704800935520297'
+  - relpath: raw/corruptmnist_v2/train_target_5.pt
+    md5: b44e2cd89f6efcbe4eb88253da30f327
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08c6b8aab19ed083031001
+        version_id: '1704800935386182'
+  - relpath: raw/corruptmnist_v2/train_target_6.pt
+    md5: 7ee533a5e3f0259ba9cc77a84b1ab68a
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08edbda8b19ed083031001
+        version_id: '1704800935354093'
+  - relpath: raw/corruptmnist_v2/train_target_7.pt
+    md5: 1d4f0cfef579c89c8d9078439d853c67
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08b9b9aab19ed083031001
+        version_id: '1704800935386297'
+  - relpath: raw/corruptmnist_v2/train_target_8.pt
+    md5: 1f30d7fd83236e17b8f941c01c35f94f
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08f4e4a8b19ed083031001
+        version_id: '1704800935359092'
+  - relpath: raw/corruptmnist_v2/train_target_9.pt
+    md5: b22a0f4155dae95e1b4b99b7c99d49af
+    size: 480768
+    cloud:
+      remote_storage:
+        etag: 08a4b4a9b19ed083031001
+        version_id: '1704800935369252'
+  - relpath: raw/random_mnist_images/mnist_sample.npy
+    md5: 1943bea1d9e54ff75788cfc40aa105fb
+    size: 7968
+    cloud:
+      remote_storage:
+        etag: 08bc9d91b19ed083031001
+        version_id: '1704800934973116'

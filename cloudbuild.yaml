@@ -1,0 +1,5 @@
+steps:
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['build', '-t', 'gcr.io/micro-reef-410710/testing', '-', '<' ,'dockerfiles/sepultura.dockerfile']
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push', 'gcr.io/micro-reef-410710/testing']
